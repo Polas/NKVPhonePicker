@@ -209,7 +209,8 @@ extension CountriesViewController {
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         delegate?.countriesViewController(self, didSelectCountry: filteredCountries[indexPath.section][indexPath.row])
-        if searchController.isActive { searchController.dismiss(animated: false, completion: nil) }
+//        if searchController.isActive { searchController.dismiss(animated: false, completion: nil) }
+        searchController.isActive = false;
         self.dismiss(animated: true, completion: nil)
     }
 }
