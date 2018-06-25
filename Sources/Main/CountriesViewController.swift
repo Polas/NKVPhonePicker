@@ -253,8 +253,5 @@ extension CountriesViewController: UISearchResultsUpdating {
 }
 
 extension CountriesViewController: UISearchBarDelegate {
-    public func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        filteredCountries = unfilteredCountries
-        tableView.reloadData()
-    }
+
 }
